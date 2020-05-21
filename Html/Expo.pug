@@ -1,0 +1,437 @@
+doctype html
+html(lang ='en')
+   head
+      meta(charset='UTF-8')
+      meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no") 
+      title EXPO2020 DUBAI UAE
+      link(rel='stylesheet' href='../Css/bootstrap.min.css')
+      link(rel='stylesheet' href='../Css/all.min.css')
+      link(rel='stylesheet' href='../Css/style.css')
+      
+   body
+      // Start of the MainNavBar
+      .mainNavBar
+         .user
+            .customContainer
+               // start of userNavBar
+               .userNavBar
+                  h6.date 20 October 2020 - 10 April 2021
+                  ul.profileMenu
+                     li(data-menu='search')
+                        i(class="fas fa-search")
+                     li(data-menu='login')
+                        i(class="far fa-user")
+                     li(data-menu='lang') English
+               hr
+            // End of userNavBar
+
+            // Start of userMenus
+            .userMenues
+               div(class='search' data-menu='search')
+                  .customContainer
+                     input(type='text' placeholder="I'm looking for...")
+                     i(class="fas fa-times")
+               
+               div(class='login' data-menu='login')
+                  .customContainer
+                     button Register
+                     button Log in
+
+               div(class='lang' data-menu='lang')
+                  .customContainer
+                     button English
+                     button العربية
+            // End of userMenus
+            
+         .map
+            // start of mapNavBar
+            .mapNavBar
+               .customContainer
+                  .logo
+                     img(src='../Imgs/expoLogo.png')
+                  ul.mapMenu
+                     li(data-menu='Discover') Discover
+                     li(data-menu='Tickets') Tickets
+                     li(data-menu='WhatsNew') What's new
+                     li(data-menu='getInvolved') Get involved
+                     li(data-menu='quickLinks')
+                        i(class="fas fa-bars")
+
+            // Start of subMenus
+            .mapMenues
+               // Start discover subMenu
+               div(class='subMenu' data-menu='Discover')
+                  .customContainer
+                     .intro
+                        h6 DISCOVER
+                        img(src='../Imgs/discover-expo.jpg' alt='Discover Expo')
+                     ul
+                        h6 WHAT YOU'LL FIND
+                        - 
+                           let discoverItems = ['Discover Expo 2020 Dubai', 'Attractions', 'Arts & Culture', 'Events', 'Pavilions', 'Food', 'Shop']
+                        each item in discoverItems
+                           li=item
+                     ul
+                        h6 SUPPORT
+                        li UAE
+                        li FAQs
+                        li Contact information
+               // End discover subMenu
+
+               // Start Tickets subMenu
+               div(class='subMenu' data-menu='Tickets')
+                  .customContainer
+                     .intro
+                        h6 TICKETS
+                        img(src='../Imgs/tickets-expo.jpg' alt='Tickets Expo')
+                     ul
+                        h6 EXPO TICKETS
+                        li Buy Tickets
+                        li Tickets overview
+                     ul
+                        h6 TICKET RESELLERS
+                        li Ticket packages
+                        li Become a ticket reseller
+               // End Tickets subMenu
+
+               // Start What's new 
+               div(class='subMenu' data-menu='WhatsNew')
+                  .customContainer
+                     .intro
+                        h6 WHAT'S NEW
+                        img(src='../Imgs/whatsNew-expo.jpg' alt='what is new')
+                        
+                     ul
+                        h6 YOUR EXPO UPDATES
+                        - 
+                           let WhatsNewItems = ['Expo News', 'Inspiring Stories', 'Expo 2020 Channel','Gallery', 'Media']
+                        each item in WhatsNewItems
+                           li=item
+               // End What's new 
+
+               // Start Get Involved
+               div(class='subMenu' data-menu='getInvolved')
+                  .customContainer
+                     .intro
+                        h6 GET INVOLVED
+                        img(src='../Imgs/programmes-expo.jpg' alt='programmes')
+                     ul
+                        h6 PROGRAMMES
+                        - 
+                           let programmesItems = ['All Programmes', 'Expo Live', 'Expo Live | Innovation Grant', 'Expo School Programme', 'Expo 2020 Volunteers','Hayyakum', 'World Majlis', 'Global Best Practice Programme']
+                        each item in programmesItems
+                           li=item
+
+                     ul 
+                        h6 BUSINESS
+                        - 
+                           let businessItems = ['Business overview', 'Dubai Exhibition Centre', 'Online Market Place', 'Participant Portal', 'Ticket resellers', 'Partners']
+                        each item in businessItems
+                           li=item
+
+                     ul 
+                        h6 CAREERS
+                        li Find jobs
+                        li Expo Emiratisation Programme    
+               // End Get Involved
+
+               // Start of Quick Links
+               div(class='subMenu' data-menu='quickLinks')
+                  .customContainer
+                     .link
+                        i(class="fas fa-globe-americas")
+                        h6 Pavilions
+                     .link
+                        i(class="fas fa-tv")
+                        h6 Expo 2020 Channel
+                     .link
+                        i(class="fas fa-users")
+                        h6 Partners
+                     .link
+                        i(class="far fa-question-circle")
+                        h6 FAQs
+                     .link
+                        i(class="fas fa-headset")
+                        h6 Contact Us
+
+            // End of subMneus
+
+            
+
+      // Start of Banner
+      .banner
+         .overlay
+         .banner-heading
+            .customContainer
+               h1 NEW EXPO 2020 DATES ANNOUNCED 
+               p 01 October 2021 - 31 March 2022
+               button Learn More
+
+         .banner-slider
+            .customContainer
+               .banner-slider-heading
+                  h1 Expo 2020 Dubai at a glance
+                  p There's something for everyone
+                  
+               .slider-show
+                  i(class="controls right fas fa-chevron-circle-right")
+                  i(class="controls left fas fa-chevron-circle-left")
+                  .slider-thumbnails
+                     .thumbnail
+                        img(src='../Imgs/live.jpg' alt='')
+                        .thumbnail-content
+                           p Expo Live
+                           h6 Meet people making our world brighter
+                           button Know More
+
+                     .thumbnail
+                        img(src='../Imgs/human-flight.jpg' alt='')
+                        .thumbnail-content
+                           p  Mission: Human Flight
+                           h6 World’s first unassisted take off flight
+                           button Know More
+
+                     .thumbnail
+                        img(src='../Imgs/pavilions.jpg' alt='')
+                        .thumbnail-content
+                           p  PAVILIONS
+                           h6 The latest pavilions revealed
+                           button Know More
+
+                     .thumbnail
+                        img(src='../Imgs/business.jpg' alt='')
+                        .thumbnail-content
+                           p  BUSINESS
+                           h6 A global stage for business
+                           button Know More
+
+                     .thumbnail
+                        img(src='../Imgs/application.jpg' alt='')
+                        .thumbnail-content
+                           p  Attractions
+                           h6 Say hello to the Expo 2020 Dubai Mascots
+                           button Know More
+
+                     .thumbnail
+                        img(src='../Imgs/update.jpg' alt='')
+                        .thumbnail-content
+                           p  IMPORTANT UPDATE
+                           h6 New dates announced for Expo 2020
+                           button Know More
+
+                     .thumbnail
+                        img(src='../Imgs/update2.jpg' alt='')
+                        .thumbnail-content
+                           p  IMPORTANT UPDATE
+                           h6 Expo 2020's COVID-19 response
+                           button Know More
+
+                     .thumbnail
+                        img(src='../Imgs/business.jpg' alt='')
+                        .thumbnail-content
+                           p  BUSINESS
+                           h6 A global stage for business
+                           button Know More
+      // End of Banner
+
+      // Start of Russia pavilion
+      .russiaPavilion
+         .overlay
+         .customContainer
+            .content
+               h1 Russia Pavilion
+               p Offering visitors a chance to see what future minds will be able to achieve.
+               button explore
+      
+      // Start of Banner01
+      .banner01
+         .banner-heading
+            .customContainer
+               h1 What's new 
+               p Your latest Expo 2020 Dubai updates
+
+         .banner-slider
+            .customContainer             
+               .slider-show
+                  i(class="controls right fas fa-chevron-circle-right")
+                  i(class="controls left fas fa-chevron-circle-left")
+                  .slider-thumbnails
+                     .thumbnail
+                        img(src='../Imgs/banner01-1.jpg' alt='')
+                        .thumbnail-content
+                           p 05 May 2020
+                           h6 Global Support for Expo Postponement
+                           button Know More
+
+                     .thumbnail
+                        img(src='../Imgs/banner01-2.jpg' alt='')
+                        .thumbnail-content
+                           p  06 April 2020
+                           h6 Global Organisation back delay decision
+                           button Know More
+
+                     .thumbnail
+                        img(src='../Imgs/banner01-3.jpg' alt='')
+                        .thumbnail-content
+                           p  02 April 2020
+                           h6 Expo 2020 Partners rally to show support
+                           button Know More
+
+                     .thumbnail
+                        img(src='../Imgs/banner01-4.jpg' alt='')
+                        .thumbnail-content
+                           p  01 April 2020
+                           h6 A We are one, say countries
+                           button Know More
+
+                     .thumbnail
+                        img(src='../Imgs/banner01-5.jpg' alt='')
+                        .thumbnail-content
+                           p  22 March 2020
+                           h6 Water issues on Expo's agenda
+                           button Know More
+
+                     .thumbnail
+                        img(src='../Imgs/banner01-6.jpg' alt='')
+                        .thumbnail-content
+                           p  10 March 2020
+                           h6 Youth talents flourishes in Expo's pavilions
+                           button Know More
+
+                     .thumbnail
+                        img(src='../Imgs/banner01-7.jpg' alt='')
+                        .thumbnail-content
+                           p  02 March 2020
+                           h6 AR Rahman and Expo in harmony
+                           button Know More
+
+         button View All
+                  
+      // End of Banner01
+
+      // Start of the channel
+
+      .channel
+         .overlay
+         .customContainer
+            .content
+               h3 Expo 2020 Channel
+               p The Expo 2020 Channel gives you a glimpse into the exciting experiences you can enjoy at the World’s Greatest Show and is dedicated to our programmes, partners, attractions, pavilions, events, news and much more.
+               button Watch Now
+
+      // End of the channel
+
+      // Start of the Dubai's sites
+
+      h1.sites The Expo 2020 Dubai site
+
+      div(id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel")
+         div(class="carousel-inner")
+            div(class="carousel-item active" data-interval="3000")
+               img(src="../Imgs/site01.jpg" class="d-block w-100" alt="...")
+            div(class="carousel-item" data-interval="3000") 
+               img(src="../Imgs/site02.jpg" class="d-block w-100" alt="...")
+            div(class="carousel-item" data-interval="3000")
+               img(src="../Imgs/site03.jpg" class="d-block w-100" alt="...")
+            div(class="carousel-item" data-interval="3000")
+               img(src="../Imgs/site04.jpg" class="d-block w-100" alt="...")
+
+      // End of the Dubai's sites
+
+      // Start of partners
+
+      .partners
+         p EXPO 2020 DUBAI THANKS ITS PARTNERS FOR THEIR SUPPORT
+         h4 OFFICIAL PREMIER PARTNERS
+         .customContainer
+            img(src='../Imgs/partner01.jpg')
+            img(src='../Imgs/partner02.jpg')
+            img(src='../Imgs/partner03.jpg')
+            img(src='../Imgs/partner04.jpg')
+            img(src='../Imgs/partner05.jpg')
+            img(src='../Imgs/partner06.jpg')
+         
+      // End of partners  
+
+      // Start of footer
+
+      .footer
+         .customContainer
+            .newsLetter
+               p NEWSLETTER
+               h6 The latest news from Expo 2020 Dubai
+               .email
+                  input(type='email' placeholder='Email Address' required)
+                  button Sign In
+            hr
+            .footerMenues
+               ul
+                  h6 BUSINESS
+                  -
+                     let businessItems02 = ['Business overview', 'Dubai Exhibition Centre', 'Online Marketplace', 'Partners', 'Participant Portal', 'Ticket Resellers']
+                  each item in businessItems02
+                     li= item
+
+               ul
+                  h6 COMPANY INFORMATION
+                  -
+                     let company = ['Careers', 'Countdown', 'Expo Brand', 'Media', 'Location']
+                  each item in company
+                     li= item
+
+               ul
+                  h6 SUPPORT
+                  -
+                     let support = ['Contact information', 'FAQs', 'Visiting UAE', 'Expo App', 'Sitemap']
+                  each item in support
+                     li= item
+
+               ul
+                  h6 LEGAL
+                  -
+                     let legal = ['Corporate policies', 'Disclaimer', 'Privacy and cookies', 'Terms and conditions', 'Visitor Terms and Conditions', 'Worker Welfare']
+                  each item in legal
+                     li= item
+            hr
+            ul(class='social')
+               -
+                  let icons = ['fab fa-facebook-f', 'fab fa-twitter',
+                  'fab fa-instagram', 'fab fa-youtube', 'fab fa-linkedin']
+               each icon in icons
+                  li
+                     i(class=icon)
+
+      // End of footer 
+
+      // Start of chat 
+
+      .chat
+         .welcome
+            p Hello! I'm here to help
+            img(src='../Imgs/aml.jpg')
+            
+         .chatBody
+            .head
+               h6 Amal
+               i(class="fas fa-times")
+            .body 
+               .amlTalk
+                  img(src='../Imgs/aml.jpg')
+                  .talks
+                     p Hello! Before we begin I'd like to get to know you better.
+                     p What is your email address? I need this information in case we get disconnected.
+               .userTalk
+            .speak
+               input(type='text' placeholder='type here')
+               i(class="far fa-paper-plane")
+   
+   
+   
+                  
+
+      // Js Files
+      script(src='../Js/Jquery.min.js') 
+      script(src='../Js/popper.min.js') 
+      script(src='../Js/bootstrap.min.js')
+      script(src='../Js/main.js')     
+            

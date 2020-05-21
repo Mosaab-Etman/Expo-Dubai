@@ -1,0 +1,107 @@
+/* ------ Variables --------*/
+$btnColor: #ffa300;
+
+/* ------ Classes --------*/
+.customContainer {
+    width: 90%;
+    margin: auto;
+}
+
+%intro {
+    width: 25%;
+    margin-right: 5%;
+    img {
+    width: 100%; height: 300px;
+    }
+}
+
+%sub-subMenu {
+    width: 25%;
+    margin: 0; padding: 0;
+    list-style: none;
+    line-height: 35px;
+    li {
+       transition: all .5s ease;
+       &:hover {
+          cursor: pointer;
+          color: $btnColor;
+       }
+    }    
+} 
+
+%btnStyle {
+    display: block;
+    padding: 10px;
+    background-color: #ffa300;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    transition: all .5s ease;
+    &:hover {background-color: #ED8B00}
+}
+
+%banner-slider-Style {
+    position: relative; z-index: 2;
+    margin-top: 100px;
+    background-image: linear-gradient(180deg, transparent, transparent, #080808, black);
+    .banner-slider-heading {
+        text-align: center;
+    }
+    .slider-show {
+        margin-top: 50px;
+        overflow: hidden;
+        .controls {
+            position: absolute; z-index: 5;
+            top: 45%;
+            font-size: 2.5rem;
+            transition: all .5s ease;
+            &.fa-chevron-circle-right {right: 1%}
+            &.fa-chevron-circle-left {left: 1%}
+            &:hover {
+                cursor: pointer;
+                color: $btnColor;
+                font-size: 2.7rem;
+                }
+        }
+        .slider-thumbnails {
+            display: flex;
+            flex-wrap: wrap;
+            .thumbnail {
+                position: relative;
+                img {
+                    width: 95%;
+                    margin: auto;
+                    display: block;
+                    transition: all .5s ease;
+                    &:hover {
+                        transform: scale(1.05)
+                    }
+                }
+                .thumbnail-content {
+                    position: relative;
+                    bottom: 15%; left: 10%;
+                    width: 80%; padding: 15px;
+                    font-weight: bold;
+                    background-color: white; color: black;
+                    button {
+                        background-color: transparent;
+                        border: none;
+                        transition: all .5s ease;
+                        &:after {
+                        content: '';
+                        height: 2px; 
+                        display: block;
+                        background-color: $btnColor;
+                        }
+                        &:hover {background-color: $btnColor}
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+
+

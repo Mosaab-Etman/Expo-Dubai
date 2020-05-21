@@ -1,0 +1,157 @@
+doctype html
+html(lang ='en')
+head
+   meta(charset='UTF-8')
+   meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+   title EXPO2020 DUBAI UAE
+   link(rel='stylesheet' href='../Css/bootstrap.min.css')
+   link(rel='stylesheet' href='../Css/all.min.css')
+   link(rel='stylesheet' href='../Css/style.css')
+
+body
+   // Start of the MainNavBar
+   .mainNavBar
+      .customContainer
+         // start of userNavBar
+         .userNavBar
+            h6.date 20 October 2020 - 10 April 2021
+            ul.profileMenu
+               li(data-menu='search')
+                  i(class="fas fa-search")
+               li(data-menu='login')
+                  i(class="far fa-user")
+               li(data-menu='lang') English
+            hr
+         // End of userNavBar
+
+         // Start of userMenus
+         .userMenues
+            div(class='search' data-menu='search')
+               .customContainer
+                  input(type='text' placeholder="I'm looking for...")
+                  i(class="fas fa-times")
+            
+            div(class='login' data-menu='login')
+               .customContainer
+                  button Register
+                  button Log in
+
+            div(class='lang' data-menu='lang')
+               .customContainer
+                  button English
+                  button العربية
+         // End of userMenus
+            
+
+         // start of mapNavBar
+         .mapNavBar
+            .logo
+               img(src='../Imgs/expoLogo.png')
+            ul.mapMenu
+               li(data-menu='Discover') Discover
+               li(data-menu='Tickets') Tickets
+               li(data-menu='WhatsNew') What's new
+               li(data-menu='getInvolved') Get involved
+            .menuToggler
+               i(class="fas fa-bars")
+         // End of mapNavBar
+
+         // Start of subMenus
+         .mapMenues
+            .customContainer
+               // Start discover subMenu
+               div(class='subMenu' data-menu='Discover')
+                  .intro
+                     h6 DISCOVER
+                     img(src='../Imgs/discover-expo.jpg' alt='Discover Expo')
+                  ul
+                     h6 WHAT YOU'LL FIND
+                     - 
+                        let discoverItems = ['Discover Expo 2020 Dubai', 'Attractions', 'Arts & Culture', 'Events', 'Pavilions', 'Food', 'Shop']
+                     each item in discoverItems
+                        li=item
+                  ul
+                     h6 SUPPORT
+                     li UAE
+                     li FAQs
+                     li Contact information
+               // End discover subMenu
+
+               // Start Tickets subMenu
+               div(class='subMenu' data-menu='Tickets')
+                  .intro
+                     h6 TICKETS
+                     img(src='../Imgs/tickets-expo.jpg' alt='Tickets Expo')
+                  ul
+                     h6 EXPO TICKETS
+                     li Buy Tickets
+                     li Tickets overview
+                  ul
+                     h6 TICKET RESELLERS
+                     li Ticket packages
+                     li Become a ticket reseller
+               // End Tickets subMenu
+
+               // Start What's new 
+               div(class='subMenu' data-menu='WhatsNew')
+                  .intro
+                     h6 WHAT'S NEW
+                     img(src='../Imgs/whatsNew-expo.jpg' alt='what is new')
+                     
+                  ul
+                     h6 YOUR EXPO UPDATES
+                     - 
+                        let WhatsNewItems = ['Expo News', 'Inspiring Stories', 'Expo 2020 Channel','Gallery', 'Media']
+                     each item in WhatsNewItems
+                        li=item
+               // End What's new 
+
+               // Start Get Involved
+               div(class='subMenu' data-menu='getInvolved')
+                  .intro
+                     h6 GET INVOLVED
+                     img(src='../Imgs/programmes-expo.jpg' alt='programmes')
+                  ul
+                     h6 PROGRAMMES
+                     - 
+                        let programmesItems = ['All Programmes', 'Expo Live', 'Expo Live | Innovation Grant', 'Expo School Programme', 'Expo 2020 Volunteers','Hayyakum', 'World Majlis', 'Global Best Practice Programme']
+                     each item in programmesItems
+                        li=item
+
+                  ul 
+                     h6 BUSINESS
+                     - 
+                        let businessItems = ['Business overview', 'Dubai Exhibition Centre', 'Online Market Place', 'Participant Portal', 'Ticket resellers', 'Partners']
+                     each item in businessItems
+                        li=item
+
+                  ul 
+                     h6 CAREERS
+                     li Find jobs
+                     li Expo Emiratisation Programme    
+               // End Get Involved
+
+         // End of subMneus
+
+         // Start of Quick Links
+         .quickLinks
+            .customContainer
+               h6 QUICK LINKS
+               .links
+                  .link
+                     i(class="fas fa-globe-americas")
+                     h6 Pavilions
+                  .link
+                     i(class="fas fa-tv")
+                     h6 Expo 2020 Channel
+                  .link
+                     i(class="fas fa-users")
+                     h6 Partners
+                  .link
+                     i(class="far fa-question-circle")
+                     h6 FAQs
+                  .link
+                     i(class="fas fa-headset")
+                     h6 Contact Us
+        
+            
